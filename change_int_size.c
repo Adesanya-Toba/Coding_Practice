@@ -16,7 +16,7 @@ typedef struct {
 
 int main(void)
 {
-    smaller_int_t test = {
+    smaller_int_t test = {  // struct initialization
         .num2 = 0,
         .num4 = 0,
         .num6 = 0 };

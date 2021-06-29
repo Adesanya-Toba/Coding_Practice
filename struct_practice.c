@@ -17,7 +17,7 @@ typedef struct
 point test;
 
 
-int main ()
+int main(void)
 {
     point *help = (point*)malloc(sizeof(point));
     test.x = 30;

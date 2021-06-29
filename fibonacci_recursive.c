@@ -17,7 +17,7 @@ int fib_recur(int x)
     return buffer[x];
 }
 
-int main()
+int main(void)
 {
     int var = 6;
 

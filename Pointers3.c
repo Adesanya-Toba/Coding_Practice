@@ -7,7 +7,7 @@
 #include <stdio.h>
 
 //Pointer to pointer
-int main()
+int main(void)
 {
 
 	int x = 5;

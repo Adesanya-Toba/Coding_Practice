@@ -17,7 +17,8 @@ int main()
 	}
 
     print_array(buffer, n);
-    delete(buffer);
+    delete[](buffer);
+    print_array(buffer, n);
 }
 
 void print_array(int *buffer, int size)
@@ -26,4 +27,5 @@ void print_array(int *buffer, int size)
     {
         cout << *(buffer + i) << " ";
     }
+    cout <<"\n";
 }

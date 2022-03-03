@@ -30,7 +30,7 @@ void Print(Node* head)
 	printf("\n");
 }
 
-int main()
+int main(void)
 {
 	Node* head; // head points to the Head node 
 

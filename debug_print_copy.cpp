@@ -2,7 +2,7 @@
  *  Uisng MACRO definitions 
 */
 #include <stdio.h>
-#include <string.h>
+#include <cstring>
 
 #if !defined(HDR) // or #ifndef, both work!
 #define HDR 
@@ -31,14 +31,15 @@
 
 void inputName(char* name)
 {
-    // WITH INPUT VALIDATION
-    // If name is "I WARNED YOU TO VALIDATE ME", which is 27 characters
-    if (strlen(name) > MAX_NAME_LENGTH){
-        return; // Return early or do something to format the name correctly
-    }
-    char name_to_save[MAX_NAME_LENGTH];
-    memcpy(name_to_save, name, MAX_NAME_LENGTH);
-    printf(name_to_save);      
+  // WITH INPUT VALIDATION
+  // If name is "I WARNED YOU TO VALIDATE ME", which is 27 characters
+  // if (strlen(name) > MAX_NAME_LENGTH){
+  //   return; // Return early or do something to format the name correctly
+  // }
+
+  char name_to_save[MAX_NAME_LENGTH];
+  memcpy(name_to_save, name, MAX_NAME_LENGTH);
+  printf(name_to_save);
 }
 
 int main(void)
@@ -50,5 +51,5 @@ int main(void)
     int PASTE(msg, 56); // using it to form a new variable name
     msg56 = 79;
 
-    inputName("Hello0000000000000000000000");
+    inputName("Hello000000000000000000000");
 }

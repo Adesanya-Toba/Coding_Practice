@@ -18,7 +18,7 @@ char last_published_metric[20] = "met1234567890_1";
 const char metric_saved[][20] = {"met1234567890_1", "met1234567890_2", "met1234567890_3","met1234567890_4",
                                 "met1234567890_5", "met2234567890_1", "met3234567890_1", "met4234567890_1",
                                 "met5234567890_1", "met5234567890_2","met6234567890_1", "met7234567890_1",
-                                "met7234567890_9999"};
+                                "met7234567890_9999", "met7234567890_2"};
 
 uint8_t sendSavedMetrics(const char* last_saved_metric)
 {
@@ -81,6 +81,7 @@ uint8_t sendSavedMetrics(const char* last_saved_metric)
                 // Particle.publish("gx_metrics", metric_to_publish, PRIVATE, WITH_ACK);
 
                 // Update the last_published_metric variable and in EEPROM
+                memset(last_published_metric, '\0', sizeof(last_published_metric));
                 strncpy(last_published_metric, (const char *)metric_saved[cnt], strlen((const char *)metric_saved[cnt]));
                 printf("Updated last published metric: %s\n\n", last_published_metric);
                 // EEPROM.put(EEPROM_ADDR_LAST_PUBL_METRIC, last_published_metric);

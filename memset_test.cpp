@@ -35,7 +35,7 @@ int main()
     int array2[10];
     memset(array2, 0, sizeof array2); // WRONG
     for (int i = 0; i < sizeof array2 / sizeof(int); i++)
-        cout << array2[i] << " ";
+        cout << "array2: " << array2[i] << " ";
     cout << "\n";
 
     memset(array2, 1, sizeof array2); // WRONG

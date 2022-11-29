@@ -11,6 +11,7 @@
 #include <iostream>
 #include <vector>
 
+using std::cout;
 
 int main()
 {
@@ -19,7 +20,11 @@ int main()
 
     for (const auto& loop_vec: array)
     {
-        std::cout << loop_vec << "\n";
+        cout << loop_vec << "\n";
     }
+
+    int a = 103;
+    cout << a/1 << std::endl;
+    cout << a%1 << std::endl;
     return 0;
 }

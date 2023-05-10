@@ -24,7 +24,11 @@ int main()
     }
 
     int a = 103;
+    std::vector <int> v1(array, array+5);
+    cout << v1.size() << std::endl;
     cout << a/1 << std::endl;
     cout << a%1 << std::endl;
     return 0;
+
+    
 }

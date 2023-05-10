@@ -23,6 +23,13 @@ int main()
 
     var = returnConstChar();
     cout << var << std::endl;
+
+    if (!0)
+    {
+        cout << "hello there" << std::endl;
+    }
+
+    char interval_name[20] = {'\0'};
     
     return 0;
 }
